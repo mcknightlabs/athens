@@ -1,0 +1,47 @@
+.app-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+.app-header {
+    background-color: #fff;
+    height: 50px;
+    padding: 20px;
+    border-bottom: solid 1px #F2F2F2;
+}
+.app-title {
+    font-size: 1.5em;
+    color: #0021FF;
+}
+.app-intro {
+    font-size: large;
+}
+@keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* main app layout */
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: .5rem;
+}
+.feature-menu {
+    background: #f9f9f9;
+    grid-column: span 2;
+    position: -webkit-sticky;
+    position: sticky;
+    height: 100vh;
+    padding: 2rem 1rem;
+}
+.feature-sub-menu {
+    border-right: solid 1px #F2F2F2;
+    grid-column: span 1;
+    vh: 100%;
+    padding: 2rem 1rem;
+}
+.canvas {
+    grid-column: span 7;
+    padding: 2rem 1rem;
+}
+
