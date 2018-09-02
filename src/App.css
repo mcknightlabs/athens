@@ -1,16 +1,26 @@
+p, li {
+  line-height: 1.6; }
+
 .app-logo {
-  animation: App-logo-spin infinite 20s linear;
   height: 80px; }
+
+.app-alert {
+  background: #0021FF;
+  color: #fff;
+  padding: 1rem; }
+.app-alert a {
+  color: #fff; }
 
 .app-header {
   background-color: #fff;
-  height: 50px;
-  padding: 20px;
-  border-bottom: solid 1px #F2F2F2; }
+  padding: 1rem;
+  border-bottom: solid 1px #e3e3e4; }
 
 .app-title {
-  font-size: 1.5em;
-  color: #0021FF; }
+  color: #0021FF;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 0; }
 
 .app-intro {
   font-size: large; }
@@ -20,12 +30,24 @@
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
-/* main app layout */
+/* main app container */
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: .5rem; }
 
+/* main-menu */
+.main-menu {
+  display: inline-block;
+  float: right;
+  list-style-type: none;
+  margin: .5rem 0 0 0;
+  padding: 0; }
+.main-menu li {
+  display: inline-block;
+  margin-left: 1rem; }
+
+/* side menus */
 .feature-menu {
   background: #f9f9f9;
   grid-column: span 2;
@@ -33,15 +55,44 @@
   position: sticky;
   height: 100vh;
   padding: 2rem 1rem; }
+.feature-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+.feature-menu ul li {
+  margin-bottom: 1rem; }
 
 .feature-sub-menu {
-  border-right: solid 1px #F2F2F2;
-  grid-column: span 1;
-  vh: 100%;
+  border-right: solid 1px #e3e3e4;
+  grid-column: span 2;
+  height: 100vh;
+  padding: 2rem 1rem; }
+.feature-sub-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+.feature-sub-menu ul li {
+  margin-bottom: 1rem; }
+.feature-sub-menu .action {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem; }
+
+/* canvas */
+.canvas {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column: span 8;
   padding: 2rem 1rem; }
 
-.canvas {
-  grid-column: span 7;
-  padding: 2rem 1rem; }
+.canvas-message {
+  grid-column: 2 / 10; }
+
+/* journal */
+.journal {
+  border: solid 1px #e3e3e4;
+  height: 70vh;
+  grid-column: 2 / 10; }
 
 /*# sourceMappingURL=app.css.map */
